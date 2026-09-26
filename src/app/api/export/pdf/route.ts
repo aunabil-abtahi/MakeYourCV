@@ -14,10 +14,13 @@ export async function GET(request: Request) {
   const targetUrl = `${appUrl}/share/${token}`;
 
   try {
+    const isLocal = process.env.NODE_ENV === 'development';
+    const localExecutablePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+
     const browser = await puppeteer.launch({
-      args: chromium.args,
+      args: isLocal ? [] : chromium.args,
       defaultViewport: { width: 1920, height: 1080 },
-      executablePath: await chromium.executablePath(),
+      executablePath: isLocal ? localExecutablePath : await chromium.executablePath(),
       headless: true,
     });
 
