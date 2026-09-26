@@ -1,0 +1,47 @@
+.modal {
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  backdrop-filter: blur(8px);
+}
+
+.modal::backdrop {
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  width: 90vw;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: var(--text-primary);
+}
+
+.body {
+  padding: 1.5rem;
+}

@@ -1,0 +1,39 @@
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 9999;
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.success { border-left-color: var(--accent-success); }
+.error { border-left-color: var(--accent-danger); }
+.info { border-left-color: var(--accent-secondary); }
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: var(--text-primary);
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
