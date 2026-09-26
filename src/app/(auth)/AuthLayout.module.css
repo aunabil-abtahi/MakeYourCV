@@ -1,0 +1,18 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.glassContainer {
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
