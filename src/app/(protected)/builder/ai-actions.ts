@@ -70,7 +70,7 @@ You must return a valid JSON object with EXACTLY the following structure (do NOT
 
   try {
     const interaction = await client.interactions.create({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-3.5-flash',
       input: systemPrompt,
     });
 
